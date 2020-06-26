@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.example.kotlintraining.components.CustomEditTextWithLabel
+        android:id="@+id/view_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:custom_component_hint="@string/email_hint"
+        app:custom_component_title="@string/email_title" />
+
+    <com.example.kotlintraining.components.CustomEditTextWithLabel
+        android:id="@+id/view_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/view_email"
+        app:layout_constraintStart_toStartOf="@+id/view_email"
+        app:layout_constraintTop_toBottomOf="@+id/view_email"
+        app:custom_component_hint="@string/password_hint"
+
+        app:custom_component_title="@string/password_title" />
+
+    <Button
+        android:id="@+id/btn_remember_me"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view_pass"
+        app:layout_constraintStart_toStartOf="@+id/view_pass"
+        app:layout_constraintTop_toBottomOf="@+id/view_pass"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_remember_me"
+        app:layout_constraintStart_toStartOf="@+id/btn_remember_me"
+        app:layout_constraintTop_toBottomOf="@+id/btn_remember_me"
+        app:layout_constraintVertical_bias="0.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
